@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Earning Website - Pollfish</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f9ff;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background: #007bff;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 1rem;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin: 1rem 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    button {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.2rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    nav {
+      display: flex;
+      justify-content: space-around;
+      background: #e3f0ff;
+      padding: 0.8rem 0;
+    }
+    nav a {
+      text-decoration: none;
+      color: #007bff;
+      font-weight: bold;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 0.8rem;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>💰 Earn by Completing Surveys</h1>
+  </header>
+
+  <nav>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#leaderboard">Leaderboard</a>
+    <a href="#wallet">Wallet</a>
+    <a href="#redeem">Redeem</a>
+  </nav>
+
+  <div class="container">
+    <section id="dashboard" class="card">
+      <h2>Welcome, User!</h2>
+      <p>Click the button below to start earning by completing surveys.</p>
+      <button onclick="startSurvey()">Start Earning</button>
+    </section>
+
+    <section id="leaderboard" class="card">
+      <h2>🏆 Leaderboard</h2>
+      <table>
+        <tr><th>User</th><th>Earnings</th></tr>
+        <tr><td>Rohit</td><td>$15.00</td></tr>
+        <tr><td>Priya</td><td>$12.50</td></tr>
+        <tr><td>Aditya</td><td>$10.75</td></tr>
+      </table>
+    </section>
+
+    <section id="wallet" class="card">
+      <h2>💼 Your Wallet</h2>
+      <p>Current Balance: <strong>$0.00</strong></p>
+    </section>
+
+    <section id="redeem" class="card">
+      <h2>💳 Redeem Earnings</h2>
+      <p>Minimum payout: $50</p>
+      <form>
+        <label>Payment Method:</label>
+        <select>
+          <option>PayPal</option>
+          <option>UPI</option>
+        </select>
+        <br><br>
+        <label>Enter Details:</label>
+        <input type="text" placeholder="PayPal Email / UPI ID" />
+        <br><br>
+        <button type="submit">Request Payout</button>
+      </form>
+    </section>
+  </div>
+
+  <script>
+    function startSurvey() {
+      alert("Pollfish survey will start here (integrate API key in the code).");
+    }
+  </script>
+
+  <!-- Pollfish JavaScript SDK (Replace YOUR_API_KEY with actual key) -->
+  <script>
+    window.pollfishConfig = {
+      api_key: "YOUR_API_KEY",
+      debug: true
+    };
+  </script>
+  <script src="https://storage.googleapis.com/pollfish_production/sdk/webplugin/pollfish.min.js"></script>
+</body>
+</html>
